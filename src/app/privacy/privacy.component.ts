@@ -13,7 +13,7 @@ export class PrivacyComponent implements OnInit {
   constructor(private pageService: PageService,private seoService : SeoService) { 
     
     this.seoService.setMetaTags({
-      title:`Privacy Policy | TutsCoder`,
+      title:`Privacy Policy | GenHub`,
       description:`none`
     });
 

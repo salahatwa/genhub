@@ -13,8 +13,8 @@ export class AboutComponent implements OnInit {
   constructor(private pageService: PageService,private seoService : SeoService) { 
     
     this.seoService.setMetaTags({
-      title:`About us | TutsCoder`,
-      description:`About us | TutsCoder`
+      title:`About us | GenHub`,
+      description:`About us | GenHub`
     });
 
   }

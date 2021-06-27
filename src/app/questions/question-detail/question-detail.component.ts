@@ -41,7 +41,7 @@ export class QuestionDetailComponent implements OnInit {
         this.post = post;
         
         this.seoService.setMetaTags({
-          title: `${this.post.title} | TutsCoder`,
+          title: `${this.post.title} | GenHub`,
           description: `${this.post.metaDescription}`,
         });
 

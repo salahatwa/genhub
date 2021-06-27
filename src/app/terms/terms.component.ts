@@ -22,7 +22,7 @@ export class TermsComponent implements OnInit {
       this.terms = data;
 
       this.seoService.setMetaTags({
-        title: `Terms & Conditions | TutsCoder`,
+        title: `Terms & Conditions | GenHub`,
         description: this.terms.metaDescription,
       });
     });

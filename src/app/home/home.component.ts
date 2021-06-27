@@ -43,8 +43,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     private sessionStorageService: SessionStorageService
   ) {
     this.seoService.setMetaTags({
-      title: `TutsCoder - Programming Blog & Web Development Tutorials`,
-      description: `Learn Web Development, NodeJs, Angular, JavaScript, jQuery ,Ajax,ReactJs, WordPress with TutsCoder tutorials`,
+      title: `GenHub - Programming Blog & Web Development Tutorials`,
+      description: `Learn Web Development, NodeJs, Angular, JavaScript, jQuery ,Ajax,ReactJs, WordPress with GenHub tutorials`,
     });
     this.meta.addTag({
       name: "keywords",

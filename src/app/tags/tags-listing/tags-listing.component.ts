@@ -38,7 +38,7 @@ export class TagsListingComponent implements OnInit {
         this.seoService.setMetaTags({
           title: `${this.commanService.capitalizeFirstLetter(
             this.tag
-          )} | TutsCoder`,
+          )} | GenHub`,
         });
 
         this.page = queryParams.get("page") ? +queryParams.get("page") : 1;

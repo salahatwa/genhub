@@ -24,7 +24,7 @@ export class SnippetListingComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.category = params["category"];
-      //this.seoService.updateTitle(`${this.category} | TutsCoder`);
+      //this.seoService.updateTitle(`${this.category} | GenHub`);
       this.getSnippetByCategory();
       this.getAllCategory();
       this.getAllTags();

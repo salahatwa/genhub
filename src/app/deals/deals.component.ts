@@ -11,7 +11,7 @@ export class DealsComponent implements OnInit {
   constructor(private seoService : SeoService) {
   
     this.seoService.setMetaTags({
-      title:`Promo Codes, Coupons, Deals & Offers for Web Development - TutsCoder`,
+      title:`Promo Codes, Coupons, Deals & Offers for Web Development - GenHub`,
       description:`Get exclusive discount using our promo code, coupons, and promotion links`
     });
    }

@@ -13,8 +13,8 @@ export class SeoService {
 
   setMetaTags(config?: any) {
     config = {
-      title: `TutsCoder - Programming Blog & Web Development Tutorials`,
-      description: `Learn Web Development, NodeJs, Angular, JavaScript, jQuery ,Ajax,ReactJs, WordPress with TutsCoder tutorials`,
+      title: `GenHub - Programming Blog & Web Development Tutorials`,
+      description: `Learn Web Development, NodeJs, Angular, JavaScript, jQuery ,Ajax,ReactJs, WordPress with GenHub tutorials`,
       image: `https://www.tutscoder.com/assets/icons/apple-touch-icon.png`,
       url: `https://www.tutscoder.com/${this.router.url}`,
       ...config,

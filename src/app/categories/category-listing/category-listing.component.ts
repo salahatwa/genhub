@@ -42,7 +42,7 @@ export class CategoryListingComponent implements OnInit {
         this.seoService.setMetaTags({
           title: `${this.commanService.capitalizeFirstLetter(
             this.category
-          )} | TutsCoder`,
+          )} | GenHub`,
         });
 
         this.page = queryParams.get("page") ? +queryParams.get("page") : 1;

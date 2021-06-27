@@ -24,7 +24,7 @@ export class QuestionListingComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.category = params["category"];
-      //this.seoService.updateTitle(`${this.category} | TutsCoder`);
+      //this.seoService.updateTitle(`${this.category} | GenHub`);
       this.getQuestionByCategory();
       this.getAllCategory();
       this.getAllTags();
