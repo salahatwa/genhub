@@ -1,0 +1,26 @@
+.w-category-list li {
+  margin-bottom: 7px;
+  padding-bottom: 7px;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  display: block;
+  float: left;
+  border-bottom: 1px dashed rgba(168, 166, 166, 0.2);
+}
+
+.w-category-list li a {
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 15px;
+  margin: 0;
+  margin-right: 10px;
+  text-transform: capitalize;
+  color: black;
+}
+
+.w-category-list li span {
+  color: #999;
+  font-size: 13px;
+  position: relative;
+}

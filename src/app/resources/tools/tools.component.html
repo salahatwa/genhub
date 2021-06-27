@@ -1,0 +1,64 @@
+<!-- <h1>Comming soon...</h1> -->
+<div class="container resources-box">
+  <!-- <h2>Most Recommended Tools</h2> -->
+  <!--   <div class="row mt-5 recommended-tool">
+    <div class="col-12 col-md-4 text-center">
+      <div class="recommended-tool__image"><img width="300" height="144" src="#"
+          class="attachment-medium size-medium wp-post-image" alt=""></div>
+      <div class="recommended-tool__url">
+        <a class="btn btn-success" href="#" target="_blank">Try Bluehost</a>
+      </div>
+    </div>
+    <div class="col-6 col-md-8 recommended-tool-right">
+
+      <div class="recommended-tool__body">
+        <div class="recommended-tool__title-wrapper">
+          <h3 class="recommended-tool__title">Bluehost</h3>
+          <div class="recommended-tool__badge">#1 for Website Hosting</div>
+        </div>
+        <div class="recommended-tool__text">
+          <p>Bluehost is our go-to hosting platform for all of our websites, including this one.</p>
+          <p>Bluehost is a proven powerhouse in the website hosting industry. They offer exceptional customer service.
+            They allow you to host multiple domains under one account, which is super convenient. They're as reliable as
+            they come. And they offer an exclusive discount just for you as an SPI Fan: hosting for only $2.75/month!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <ng-container *ngFor="let tool of toolbox">
+    <h2 class="toolbox-title">{{tool.title}}</h2>
+    <div class="row">
+
+      <div class="col-12 col-sm-12 col-md-4 toolbox" *ngFor="let item of tool.data">
+        <div class="other-tools">
+          <div class="other-tools__image"><img width="300" height="144" [src]="item.img"
+              class="attachment-medium size-medium wp-post-image" alt=""></div>
+
+
+          <div class="horizonatal-divider-wrap">
+            <p class="horizonatal-divider"></p>
+
+          </div>
+          <h3 class="other-tools__title">{{item.title}}</h3>
+
+          <div class="other-tools__text">
+            <p>{{item.desc}}
+            </p>
+          </div>
+          <div class="other-tools__url"><a class="button btn btn-success toolbox-btn" [href]="item.link"
+              target="_blank">Try
+              Now</a></div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <div class="row disclosure-box">
+    <p><strong>Disclosure:</strong> This
+      page may
+      contain affiliate links. When you click an affiliate link and make a purchase, we get a small compensation at no
+      cost to you.</p>
+  </div>
+
+
+</div>

@@ -1,0 +1,147 @@
+<footer id="footer">
+  <div class="container">
+    <div class="row footer-widgets">
+      <!-- footer widget about-->
+      <div class="col-sm-4 col-xs-12">
+        <div class="footer-widget f-widget-about">
+          <div class="col-sm-12">
+            <div class="row">
+              <h4 class="title">About</h4>
+              <!-- <div class="title-line"></div> -->
+              <p>
+                Learn Web Development, AngularJs,NodeJs,ReactJs, JavaScript, jQuery, Ajax, ,WordPress, etc. with
+                TutsCoder Programming and Web Development Tutorials. </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.col-sm-4 -->
+
+      <!-- footer widget random posts-->
+      <div class="col-sm-4 col-xs-12">
+
+        <div class="footer-widget f-widget-random">
+          <div class="col-sm-12">
+            <div class="row">
+              <h4 class="title">Most Viewed Posts</h4>
+
+              <ul class="b">
+                <li *ngFor="let post of popularPosts" class="p-1">
+
+                  <a routerLink="/post/{{post.slug}}">{{post.title}}</a>
+                </li>
+
+              </ul>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer widget follow us-->
+      <div class="col-sm-4 col-xs-12">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="footer-widget f-widget-follow">
+              <div class="col-sm-12">
+                <div class="row">
+                  <h4 class="title">Social Media</h4>
+
+                  <ul>
+
+                    <li>
+                      <a class="facebook" rel="noopener noreferrer" href="https://www.facebook.com/TutsCoder"
+                        target="_blank">
+                        <i class="icon-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a class="twitter" rel="noopener noreferrer" href="https://twitter.com/tutscoder"
+                        target="_blank"><i class="icon-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a class="youtube" rel="noopener noreferrer"
+                        href="https://www.youtube.com/channel/UCmObcNnWeVBlSeO_iQhsRcA" target="_blank"><i
+                          class="icon-youtube"></i></a>
+                    </li>
+
+                    <li>
+                      <a class="pinterest" rel="noopener noreferrer" href="https://in.pinterest.com/tutscoder"
+                        target="_blank"><i class="icon-pinterest"></i></a>
+                    </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- newsletter -->
+        <div class="col-sm-12">
+          <div class="row">
+            <p>Subscribe here to get interesting stuff and updates!</p>
+            <form>
+
+              <div class="newsletter">
+                <div class="left">
+                  <input type="email" name="email" #email id="newsletter_email" placeholder="Email" required>
+                </div>
+                <div class="right">
+                  <button type="button" (click)="addSubscribe(email.value)" class="newsletter-button">Subscribe</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <p id="newsletter">
+              {{error != '' ? error : success}}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="languages-dropdown">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                  <i class="icon-language"></i>English&nbsp;<span class="icon-arrow-down"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="selected">English</a></li>
+                  <li><a href="#" class="">Hebrew</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .col-md-3 -->
+    </div>
+    <!-- .row -->
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-bottom-left">
+            <p>Copyright @ 2021 TutsCoder - All Rights Reserved.</p>
+          </div>
+          <div class="footer-bottom-right">
+            <ul class="nav-footer">
+              <li>
+                <a routerLink="/terms">Terms &amp; Conditions </a>
+              </li>
+              <li>
+                <a routerLink="/privacy-policy">Privacy </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- .row -->
+    </div>
+  </div>
+</footer>

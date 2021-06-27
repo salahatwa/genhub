@@ -1,0 +1,85 @@
+<section class="block-wrapper">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-8">
+        <div class="content">
+          <div class="col-xs-12 col-sm-12 posts ">
+            <div class="row">
+
+              <div class="loop-list loop-list-style-1">
+                <article *ngFor="let post of posts">
+
+                  <div class="row mb-40 list-style-2">
+
+                    <div class="col-md-12 align-self-center">
+                      <div class="post-content">
+                        <div class="entry-meta meta-0 font-small mb-10">
+
+                        </div>
+                        <h5 class="post-title font-weight-900 mb-20">
+                          <a routerLink="/interview-questions/{{category}}/{{post.slug}}">{{post.title}}</a>
+                        </h5>
+                        <div class="entry-meta meta-1 float-left font-x-small text-uppercase mb-3">
+                          <span class="post-on">{{post.excerpt}}</span>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+
+              </div>
+
+              <div class="col-sm-12 col-xs-12"></div>
+
+              <div class="col-sm-12 col-xs-12"></div>
+
+
+              <div class="col-sm-12 col-xs-12"></div>
+
+              <div class="col-sm-12 col-xs-12"></div>
+
+
+              <div class="col-sm-12 col-xs-12"></div>
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-xs-12">
+            <div class="row">
+
+
+
+
+
+
+            </div>
+          </div>
+          <!--      <div class="col-xs-12 col-sm-12 col-xs-12">
+              <div class="row">
+                <ul class="pagination">
+                  <li class="disabled"></li>
+                  <li class="active page-num"><a href="#">1<span class="sr-only"></span></a></li>
+                  <li class="page-num"><a href="#" data-ci-pagination-page="2">2</a>
+                  </li>
+                  <li class="page-num"><a href="#" data-ci-pagination-page="3">3</a>
+                  </li>
+                  <li class="page-num"><a href="#" data-ci-pagination-page="4">4</a>
+                  </li>
+                  <li class="page-num"><a href="#" data-ci-pagination-page="5">5</a>
+                  </li>
+                  <li class="next"><a href="#" data-ci-pagination-page="2"
+                      rel="next">›</a></li>
+                </ul>
+              </div>
+            </div> -->
+        </div>
+      </div>
+      <aside class="col-lg-4 col-md-12 sidebars s_right" style="padding-right: 0px;">
+
+        <app-sidebar></app-sidebar>
+      </aside>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,90 @@
+<div class="sidebar">
+  <div class="widget">
+    <h3 class="news-title">
+      <span>Stay in touch</span>
+    </h3>
+
+    <ul class="list-inline social-widget">
+      <li class="list-inline-item">
+        <a class="social-page facebook" rel="noopener noreferrer" href="https://www.facebook.com/TutsCoder"
+          target="_blank" title="facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="social-page twitter" rel="noopener noreferrer" href="https://twitter.com/tutscoder" target="_blank"
+          title="twitter">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="social-page youtube" rel="noopener noreferrer"
+          href="https://www.youtube.com/channel/UCmObcNnWeVBlSeO_iQhsRcA" target="_blank" title="youtube">
+          <i class="fa fa-youtube"></i>
+        </a>
+      </li>
+
+
+      <li class="list-inline-item">
+        <a class="social-page pinterest" rel="noopener noreferrer" href="https://in.pinterest.com/tutscoder"
+          target="_blank" title="pinterest">
+          <i class="fa fa-pinterest"></i>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+  <!--Featured post-->
+  <div class="widget">
+    <h3 class="news-title">
+      <span>Featured Post</span>
+    </h3>
+
+    <div class="post-list-block">
+      <div class="post-block-wrapper post-float" *ngFor="let post of featuredPosts">
+        <div class="post-thumbnail">
+          <a routerLink="/post/{{post.slug}}">
+            <img class="img-fluid" [defaultImage]="defaultImage" width="400px" height="200px" [lazyLoad]="post.featureImage?.thumb" [alt]="post.title">
+          </a>
+        </div>
+        <div class="post-content">
+          <h2 class="post-title title-sm">
+            <a routerLink="/post/{{post.slug}}">{{post.title}}</a>
+          </h2>
+          <div class="post-meta">
+            <!-- <span class="posted-time"><i class="fa fa-clock-o mr-1"></i>2 hours ago</span> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--EOF Featured post-->
+  <div class="widget">
+    <h3 class="news-title">
+      <span>CATEGORIES</span>
+    </h3>
+
+    <app-category-list [categoriesList]="categories"></app-category-list>
+
+  </div>
+  <div class="widget">
+    <h3 class="news-title">
+      <span>Support us</span>
+    </h3>
+
+    <!-- <p>If You Appreciate What We Do Here On TutsCoder, You Should Consider:</p> -->
+    <p class="text-center"><a href="https://www.buymeacoffee.com/tutscoder" rel="nofollow" target="_blank"><img
+          class="rounded w-100" alt="Support Us" src="./assets/images/coffee.png"></a></p>
+
+  </div>
+  <div class="widget">
+    <h3 class="news-title">
+      <span>Tags</span>
+    </h3>
+
+    <app-tags-list [tagsList]="tagsList"></app-tags-list>
+
+  </div>
+</div>

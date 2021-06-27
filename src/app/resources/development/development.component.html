@@ -1,0 +1,23 @@
+<div class="container resources-box">
+
+  <ng-container *ngFor="let tool of toolbox">
+    <h2 class="toolbox-title text-capitalize">{{tool.category}}</h2>
+    <div class="row">
+
+      <div class="col-12 col-sm-12 col-md-4 toolbox" *ngFor="let item of tool.data">
+        <div class="other-tools">
+
+          <h3 class="other-tools__title">{{item.title}}</h3>
+
+          <div class="other-tools__text">
+            <p>{{item.description}}
+            </p>
+          </div>
+          <div class="other-tools__url"><a class="button btn btn-success toolbox-btn" [href]="item.link"
+              target="_blank">Visit now</a></div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+</div>

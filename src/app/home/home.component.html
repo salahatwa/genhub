@@ -1,0 +1,90 @@
+<section class="block-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+
+        <div class="all-news-block">
+          <h2 class="news-title">
+            <span>Latest Articles</span>
+          </h2>
+          <button class="view-all-button" routerLink="/post" aria-label="Previous" type="button">View All</button>
+          <div class="all-news">
+
+            <div class="row">
+              <div class="col-lg-6 col-md-6" *ngFor="let post of latestPosts;">
+                <div class="post-block-wrapper post-float-half clearfix">
+                  <div class="post-thumbnail">
+                    <a routerLink="/post/{{post.slug}}">
+                      <img class="img-fluid" [defaultImage]="defaultImage" width="400px" height="200px" [lazyLoad]="post.featureImage?.medium"
+                        [alt]="post.title">
+                    </a>
+                  </div>
+                  <div class="post-content">
+                    <a class="post-category"
+                      routerLink="/category/{{post.categories[0]?.slug}}">{{post.categories[0]?.name}}</a>
+                    <h3 class="post-title mt-3">
+                      <a routerLink="/post/{{post.slug}}">{{post.title}}</a>
+                    </h3>
+                    <div class="post-meta">
+                      <!-- <span class="posted-time">an hour ago</span> -->
+                      <!--  <span class="post-author">by
+                                      <a href="#">Jignesh</a>
+                                  </span> -->
+                    </div>
+                    <p>
+                      {{post.excerpt}}...
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-40"></div>
+
+
+
+        <app-two-col-post [posts]="angularPosts" title="Angular" slug="angular"></app-two-col-post>
+        <app-two-col-post [posts]="nodePosts" title="Nodejs" slug="nodejs"></app-two-col-post>
+
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+        <app-sidebar></app-sidebar>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news-style-four bg-light section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <app-verticle-post-card [posts]="jsPosts" type="javascript" title="javascript"></app-verticle-post-card>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <app-verticle-post-card [posts]="devPosts" type="web-development" title="web development">
+        </app-verticle-post-card>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <app-verticle-post-card [posts]="wordpressPosts" type="wordpress" title="wordpress"></app-verticle-post-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <ng-template #subscriberModal>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
+ -->

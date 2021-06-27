@@ -1,0 +1,21 @@
+<div class="articles">
+
+  <h2 class="title">{{title}}</h2>
+  <div id="content" class="hfeed">
+    <div class="hentry" *ngFor="let post of posts">
+      <div class="post-thumbnail">
+        <a routerLink="/post/{{post.slug}}" title=""><img width="389" height="203" [src]="post.featureImage?.url"
+            class="attachment-post-newthumb size-post-newthumb wp-post-image" alt=""></a>
+      </div>
+      <div class="post-meta">
+        <h2><a routerLink="/post/{{post.slug}}" title="">{{post.title}}</a></h2><a routerLink="/post/{{post.slug}}"
+          class="continue">Read More »</a>
+        <div class="details">
+          <span class="date">{{post.createdAt}}</span>•<span class="comment"><a href="#">1
+              Comment</a></span></div>
+      </div>
+    </div>
+  </div>
+  <ng-content></ng-content>
+  
+</div>

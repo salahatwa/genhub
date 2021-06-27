@@ -1,0 +1,17 @@
+.w-tag-list li {
+  list-style: none;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.w-tag-list li a {
+  background-color: #f4f4f4;
+  padding: 6px 10px;
+  font-size: 13px;
+  display: block;
+  color: #888;
+  border-radius: 2px;
+  line-height: 20px;
+  text-transform: capitalize;
+}

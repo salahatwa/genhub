@@ -1,0 +1,6 @@
+<div>
+  <img *ngIf="!isActiveInput" [src]="transformView(entity[entityField])" class="editable-image mb-1 {{className}}">
+  <app-image-upload (imageLoaded)="onImageLoad()" (imageUploaded)="onImageUpload($event)"
+    (imageCanceled)="isActiveInput = false">
+  </app-image-upload>
+</div>

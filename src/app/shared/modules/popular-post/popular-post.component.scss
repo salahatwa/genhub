@@ -1,0 +1,41 @@
+.widget-popular-posts-title {
+  padding-top: 0;
+}
+
+.w-popular-list li {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  display: table;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.w-popular-list li .left {
+  width: 100px;
+  height: 75px;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: top;
+  background-color: #fafafa;
+}
+
+.w-popular-list li .img-responsive {
+    position: relative;
+    height: 75px;
+  }
+  .w-popular-list li .right {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 15px;
+  }
+  .w-popular-list li .title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 500;
+    line-height: 21px;
+    font-size: 14px;
+  }
+  .w-popular-list li .title a {
+    display: list-item;
+  }

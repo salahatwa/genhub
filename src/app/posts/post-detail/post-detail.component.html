@@ -1,0 +1,292 @@
+<section id="main" class="margin-top-30" [hidden]="!post">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-8">
+        <div class="content">
+          <div class="col-xs-12 col-sm-12 posts ">
+            <div class="row">
+
+              <div class="blog-post">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb pl-0">
+                    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                    <li class="breadcrumb-item"><a
+                        routerLink="/category/{{post.categories[0]?.slug}}">{{post.categories[0]?.name}}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{post.title}}</li>
+                  </ol>
+                </nav>
+                <ng-container *ngFor="let cat of post.categories;">
+                  <a routerLink="/category/{{cat.slug}}"
+                    class="post-cat badge badge-danger text-capitalize">{{cat.name}}</a>
+                </ng-container>
+
+
+                <h1 class="blog-post-title">{{post.title}}</h1>
+
+                <!-- <p class="blog-post-meta">{{post.created_at}} by <a href="#">Jignesh zala</a></p> -->
+                <p class="blog-post-meta">Last Updated on <strong>{{post.updatedAt | date :'longDate'}}</strong></p>
+                <share-buttons class="text-center" show="8" image="https://loremflickr.com/320/240"></share-buttons>
+                <div class="about-image">
+                  <img
+                    class="attachment-post-single-thumb size-post-single-thumb wp-post-image img-fluid article-banner"
+                    [defaultImage]="defaultImage" [lazyLoad]="post.featureImage?.url" width="700px" height="400px" [alt]="post.title">
+                </div>
+
+
+                <p class="blog-post-content" [innerHtml]="post.html">
+
+                </p>
+
+
+              </div>
+
+
+              <div class="col-sm-12 col-xs-12" *ngIf="post">
+                <div class="tagcloud">
+                  <ul>
+                    <li *ngFor="let tag of post.tags"><a routerLink="/tag/{{tag.slug}}">#{{tag.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-12 text-center">
+                <share-buttons show="8" image="https://loremflickr.com/320/240"></share-buttons>
+              </div>
+
+
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-xs-12">
+            <div class="row m-0">
+              <div class="container-wrapper" id="post-newsletter">
+                <div class="subscribe-widget">
+                  <div class="widget-inner-wrap"> <span class="icon-envelope newsletter-icon" aria-hidden="true"></span>
+                    <div class="subscribe-widget-content">
+                      <!-- <h4></h4> -->
+                      <h3>Subscribe to our mailing list to get latest tutorials!</h3>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur.</p> -->
+                    </div>
+                    <div id="mc_embed_signup">
+                      <form #emailForm="ngForm" (ngSubmit)="addSubscribe(emailForm, subscriberEmail)"
+                        class="subscribe-form validate" target="_blank" novalidate="">
+                        <div id="mc_embed_signup_scroll">
+                          <div class="mc-field-group"> <label class="screen-reader-text" for="subscriberEmail">Enter
+                              your
+                              Email address</label>
+                            <input type="email" id="email" placeholder="Enter your Email address"
+                              [(ngModel)]="subscriberEmail.email" #email="ngModel" [pattern]="emailPattern" name="email"
+                              class="subscribe-input email" required> </div>
+
+                          <div *ngIf="email.invalid && !email.pristine" class="alert alert-danger">
+                            <div *ngIf="email.errors.required">
+                              Email is required.
+                            </div>
+
+                            <div *ngIf="email.errors.pattern">
+                              Must be valid email format!
+                            </div>
+                          </div>
+                          <!--  <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                          </div> --> <input type="submit" value="Subscribe" name="subscribe"
+                            class="button subscribe-submit btn btn-success">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <div class="after-post-box">
+                <h2>If You Appreciate What We Do Here On TutsCoder, You Should Consider:</h2>
+
+                <p>If you like what you are reading, please consider buying us a coffee ( or 2 ) as a token of
+                  appreciation.</p>
+                <p class="text-center"><a href="https://www.buymeacoffee.com/tutscoder" rel="nofollow"
+                    target="_blank"><img class="rounded" alt="Support Us" src="./assets/images/coffee.png"></a></p>
+                <p style="text-align: center;"><strong>We are thankful for your never ending support.</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <div id="related-posts">
+                <div class="related-post-title">
+                  <h3>You may also like</h3>
+                </div>
+                <div class="related-posts-list">
+                  <div class="related-item" *ngFor="let post of relatedPosts;"> <a target="_blank"
+                      routerLink="/post/{{post.slug}}" class="post-thumb">
+                      <img width="390" height="220" [src]="post.featureImage?.url" [alt]="post.title"></a>
+                    <h3 class="post-title"><a routerLink="/post/{{post.slug}}" target="_blank">{{post.title}}</a></h3>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-xs-12">
+            <div class="row">
+
+              <div class="be-comment-block">
+
+                <ng-container *ngIf="post && post.comments.length > 0;">
+
+
+                  <h1 class="comments-title">Comments ({{post.comments.length}})</h1>
+
+                  <div class="card">
+                    <div class="card-body" *ngFor="let comment of post.comments">
+                      <div class="row">
+
+                        <div class="col-md-12 mb-3">
+                          <p>
+                            <a class="float-left"
+                              href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>{{comment.username}}</strong></a>
+
+
+                          </p>
+                          <div class="clearfix"></div>
+                          <p>{{comment.comment}}</p>
+                          <p>
+                            <a class="float-right btn btn-outline-primary ml-2"
+                              (click)="hideme[comment._id] = !hideme[comment._id]"> <i class="fa fa-reply"></i>
+                              Reply</a>
+
+                          </p>
+                        </div>
+                        <div class="col-md-12 mb-3" [hidden]="!hideme[comment._id]">
+                          <form #replyForm="ngForm" class="form-block">
+
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="form-group fl_icon">
+                                  <div class="icon"><i class="fa fa-user"></i></div>
+                                  <input class="form-input" [(ngModel)]="replyData.username" name="username" type="text"
+                                    placeholder="Your name" required>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6 fl_icon">
+                                <div class="form-group fl_icon">
+                                  <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                                  <input class="form-input" type="text" [(ngModel)]="replyData.email" name="email"
+                                    placeholder="Your email" required>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                  <textarea class="form-input" [(ngModel)]="replyData.reply" name="reply"
+                                    placeholder="Your text" required></textarea>
+                                </div>
+                                <a class="btn btn-primary pull-right"
+                                  (click)="replyComment(replyForm,replyData,comment._id)">Submit Comment</a>
+                                <div class="cancel-comment-reply">
+                                  <small><a rel="nofollow" id="cancel-comment-reply-link"
+                                      (click)="hideme[comment._id] = !hideme[comment._id]">Click here to cancel
+                                      reply.</a></small></div>
+                              </div>
+
+                            </div>
+                          </form>
+                        </div>
+
+                      </div>
+                      <ng-container *ngIf="comment.replies.length > 0;">
+
+                        <div class="card card-inner" *ngFor="let reply of comment.replies">
+                          <div class="card-body">
+                            <div class="row">
+
+                              <div class="col-md-10">
+                                <p><a
+                                    href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>{{reply.username}}</strong></a>
+                                </p>
+                                <p>{{reply.reply}}</p>
+                                <!--  <p>
+                              <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
+
+                            </p> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </ng-container>
+                    </div>
+                  </div>
+                </ng-container>
+
+                <form #commentForm="ngForm" class="form-block mt-3">
+                  <h3>Leave a Comment</h3>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group fl_icon">
+                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <input class="form-input" [(ngModel)]="commentData.username" name="username" type="text"
+                          placeholder="Your name" required>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 fl_icon">
+                      <div class="form-group fl_icon">
+                        <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                        <input class="form-input" type="text" [(ngModel)]="commentData.email" name="email"
+                          placeholder="Your email" required>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="form-group">
+                        <textarea class="form-input" [(ngModel)]="commentData.comment" name="comment"
+                          placeholder="Your text" required></textarea>
+                      </div>
+                      <a class="btn btn-primary pull-right" (click)="addComment(commentForm,commentData)">Submit
+                        Comment</a>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+          <!--      <div class="col-xs-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <ul class="pagination">
+                <li class="disabled"></li>
+                <li class="active page-num"><a href="#">1<span class="sr-only"></span></a></li>
+                <li class="page-num"><a href="#" data-ci-pagination-page="2">2</a>
+                </li>
+                <li class="page-num"><a href="#" data-ci-pagination-page="3">3</a>
+                </li>
+                <li class="page-num"><a href="#" data-ci-pagination-page="4">4</a>
+                </li>
+                <li class="page-num"><a href="#" data-ci-pagination-page="5">5</a>
+                </li>
+                <li class="next"><a href="#" data-ci-pagination-page="2"
+                    rel="next">›</a></li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-sm-12 col-md-4 mt-3">
+
+        <app-sidebar></app-sidebar>
+
+      </div>
+    </div>
+  </div>
+</section>

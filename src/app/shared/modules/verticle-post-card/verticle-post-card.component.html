@@ -1,0 +1,52 @@
+
+  <div class="block">
+    <h2 class="news-title">
+      <span>{{title}}</span>
+    </h2>
+    <div class="post-block-wrapper clearfix">
+      <div class="post-thumbnail">
+        <a routerLink="/post/{{posts[0]?.slug}}">
+          <img class="img-fluid" [defaultImage]="defaultImage" [lazyLoad]="posts[0]?.featureImage?.medium"  [alt]="posts[0]?.title">
+        </a>
+      </div>
+
+      <div class="post-content">
+        <h2 class="post-title mt-3">
+          <a routerLink="/post/{{posts[0]?.slug}}">{{posts[0]?.title}}</a>
+        </h2>
+        <div class="post-meta">
+          <!--    <span class="posted-time">2 hours ago</span>
+                    <span class="post-author">by
+                        <a href="author.html">Rock Madveen</a>
+                    </span>
+                    <span class="pull-right">
+                        <i class="fa fa-comments"></i>
+                        <a href="single-post.html#comments">05</a>
+                    </span> -->
+        </div>
+        <p>
+          {{posts[0]?.excerpt}}
+        </p>
+      </div>
+    </div>
+
+    <div class="post-list-block">
+      <div class="post-block-wrapper post-float clearfix" *ngFor="let post of posts | slice : 1:4;">
+        <div class="post-thumbnail">
+          <img class="img-fluid"  [defaultImage]="defaultImage" width="400px" height="200px"  [lazyLoad]="post.featureImage?.thumb" [alt]="post.title">
+
+        </div>
+
+        <div class="post-content">
+          <h3 class="post-title title-sm">
+            <a routerLink="/post/{{post.slug}}">{{post.title}}</a>
+          </h3>
+          <div class="post-meta">
+            <!-- <span class="posted-time">3 hours ago</span> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+

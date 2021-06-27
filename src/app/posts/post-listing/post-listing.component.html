@@ -1,0 +1,98 @@
+<section class="block-wrapper">
+  <main id="content" class="container aff-site-content">
+    <div class="row">
+
+
+
+      <div class="col-lg-8 col-md-12 layout_8 main-content DESC">
+        <ng-container *ngIf="firstPost else postNotFound ">
+          <article class="aff-post has-post-thumbnail lay-8" *ngIf="firstPost">
+            <header class="aff-aff-post-header aff-aff-post-header cf">
+              <div class="featured">
+                <a routerLink="/post/{{firstPost.slug}}" class="image-link media-ratio ratio-3-2 lay_8_img_fea">
+                  <img [defaultImage]="defaultImage" width="700px" height="400px" [lazyLoad]="firstPost.featureImage?.url" [alt]="firstPost.title"> </a>
+              </div>
+            </header>
+            <div class="aff-post-content cf aff-entry-content has-share-float aff-content-spacious">
+              <div class="aff-post-meta aff-post-meta-c aff-post-meta-left the-aff-post-meta has-below">
+                <h2 class="is-title aff-post-title-alt"><a routerLink="/post/{{firstPost.slug}}"
+                    [title]="firstPost.title">{{firstPost.title}}</a></h2>
+                <div class="meta-title">
+                  <div class="aff-post-meta aff-post-meta-c aff-post-meta-left has-below">
+
+
+                    <span class="post-date">
+                      Updated on <strong>{{firstPost.updatedAt | date :'longDate'}}</strong></span></div>
+                </div>
+                <div class="aff-meta-above"><span class="aff-cat-labels"><a href="#" class="category"
+                      rel="category">Angular</a></span></div>
+              </div>
+              <p>{{firstPost.excerpt}}</p>
+            </div>
+          </article>
+          <article class="aff-post aff-posts-flex-grid has-post-thumbnail">
+            <div class="aff-post-content1 cf aff-entry-content has-share-float aff-content-spacious1 lay-8"
+              *ngFor="let post of posts | slice:1 | paginate: { id: 'foo',
+              itemsPerPage: 5,
+              currentPage: page,
+              totalItems: totalItem }">
+              <figure class="aff-wp-caption post-figure-margin-bottom"><a routerLink="/post/{{post.slug}}"
+                  class="lay_8_img">
+                  <img width="500" height="270"
+                    class="attachment-grid-featured-image size-grid-featured-image wp-post-image" [defaultImage]="defaultImage" [lazyLoad]="post.featureImage?.url"  [alt]="post.title"
+                    itemprop="image"></a>
+                <figcaption class="aff-wp-caption-text"></figcaption>
+              </figure>
+              <div class="aff-post-meta aff-post-meta-c aff-post-meta-left the-aff-post-meta has-below">
+                <h2 class="is-title aff-post-title-alt" itemprop="headline"><a routerLink="/post/{{post.slug}}"
+                    [title]="post.title">{{post.title}}</a></h2>
+                <div class="meta-title">
+                  <div class="aff-post-meta aff-post-meta-c aff-post-meta-left has-below">
+
+                    <!--  <span
+                  class="aff-meta-item aff-post-author" itemprop="author">
+                  <span class="by"> Written by </span><a
+                    href="#"
+                    title="Posts by">Jignesh zala</a></span> --><a href="#" class="aff-meta-item date-link"
+                      itemprop="datePublished"><span class="post-date">Updated on
+                        <strong>{{firstPost.updatedAt | date :'longDate'}}</strong></span></a></div>
+                </div>
+                <div class="aff-meta-above"><span class="aff-cat-labels"><a href="#" class="category"
+                      rel="category">Nodejs</a></span></div>
+              </div>
+              <p>{{post.excerpt}}</p>
+            </div>
+
+          </article>
+          <!-- Pagination -->
+          <div class="col-xs-12 col-sm-12 col-xs-12">
+            
+              <div class="d-flex justify-content-center">
+                <pagination-controls 
+                  responsive="true" 
+                  previousLabel="Prev" 
+                  nextLabel="Next" 
+                  (pageChange)="onTableDataChange($event)" id="foo">
+                </pagination-controls>
+              </div>
+
+            
+          </div>
+        </ng-container>
+
+      </div>
+
+      <aside class="col-lg-4 col-md-12 sidebars s_right" style="padding-right: 0px;">
+
+        <app-sidebar></app-sidebar>
+      </aside>
+    </div>
+  </main>
+</section>
+<ng-template #postNotFound>
+  <div *ngIf="isLoaded">
+
+    <h1>This page does not exist</h1>
+  </div>
+
+</ng-template>
