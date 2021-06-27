@@ -1,0 +1,120 @@
+@media only screen and (max-width: 575px) {
+
+  .aff-post-content1.cf.aff-entry-content.has-share-float.aff-content-spacious1.lay-7,
+  .aff-post-content1.cf.aff-entry-content.has-share-float.aff-content-spacious1.lay-8 {
+    min-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  .aff-post-content1.cf.aff-entry-content.has-share-float.aff-content-spacious1.lay-7 a img,
+  .aff-post-content1:nth-child(even),
+  .aff-post-content1:nth-child(odd) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .aff-post-content1 {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aff-post-content1 {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .post-figure-margin-bottom {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  .aff-posts-flex-grid .wp-post-image,
+  .aff-post-content1 img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  img.avatar.avatar-96.photo {
+    min-height: auto;
+  }
+}
+
+/* @media only screen and (max-width: 575px) {
+  .lay_8_img img {
+    height: 160px !important;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  .post-figure-margin-bottom[_ngcontent-serverApp-c69] {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 575px) {
+  .top-nav-social-lists ul {
+    text-align: center;
+  }
+
+  .top-nav-social-lists ul li a {
+    padding: 10px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .top-nav-social-lists {
+    float: none;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+
+  .main-navbar .dropdown-menu {
+    display: none;
+  }
+
+  .top-nav-social-lists ul li a {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+
+  .main-navbar .dropdown-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-item .nav-link {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .main-navbar .dropdown-menu {
+    display: none;
+  }
+
+  .post-list-block {
+    margin-bottom: 30px;
+  }
+}
