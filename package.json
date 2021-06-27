@@ -11,10 +11,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "npm run build:ssr",
-    
+    "start:heroku": "ng run nodeblog:server:production",
     "dev:ssr": "ng run nodeblog:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build --prod && ng run nodeblog:server:production",
+    "build:ssr": "ng build --prod",
     "prerender": "ng run nodeblog:prerender",
     "gzip": "gzipper compress ./dist/browser ./browser-gzip/browser --output-file-format [filename].[ext]",
     "bundle:report": "source-map-explorer dist/browser/*.js",
