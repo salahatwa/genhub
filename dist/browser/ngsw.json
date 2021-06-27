@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1624798860178,
+  "timestamp": 1624804514350,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -15,15 +15,15 @@
         "/5-es5.014fd69f231fa412fedb.js",
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.a2516bfece4fcb8d4a8b.js",
-        "/main-es5.a2516bfece4fcb8d4a8b.js",
+        "/main-es2015.8793dae15c6a6b164252.js",
+        "/main-es5.8793dae15c6a6b164252.js",
         "/manifest.webmanifest",
         "/polyfills-es2015.75c375c674ece37157aa.js",
         "/polyfills-es5.2c28da0b30d2b25ffb4c.js",
         "/runtime-es2015.7d06920316d6a54437f8.js",
         "/runtime-es5.7d06920316d6a54437f8.js",
         "/scripts.a73844de5f291be94c3b.js",
-        "/styles.3b7f118bfdc8e3f624dd.css"
+        "/styles.2a6b563a48bcd7019cb3.css"
       ],
       "patterns": []
     },
@@ -75,7 +75,7 @@
     "/5-es2015.014fd69f231fa412fedb.js": "8a1ebb12368514d9c582d5ab4d9e425d046209af",
     "/5-es5.014fd69f231fa412fedb.js": "3d327960cf642241a5c36ec516e21d54b53caf3a",
     "/assets/css/responsive.scss": "2a38e50128f44121efafaa6f007bc82d2f204efe",
-    "/assets/css/style.scss": "1e361f418f5b5e035af94a048f92d732142a387d",
+    "/assets/css/style.scss": "8302ab7e1154a0397705e2b53c8adecbcab6963a",
     "/assets/icons/apple-touch-icon.png": "0cdcb9331cb46236b173b65cafa73f565cb4b07b",
     "/assets/icons/icon-128x128.png": "7285242dc21748bf015252d29764a971dac904bf",
     "/assets/icons/icon-144x144.png": "685c4bb7817f7f75d13a8cc2e42b74a3103c80bd",
@@ -98,24 +98,24 @@
     "/assets/images/mailerLite-logo.png": "59604dda2e8c74637cd371e77f3a06b63514d5d6",
     "/assets/images/semrush-logo.png": "d306af3ea6d1b4fad36d430afe3001be3b68cadb",
     "/assets/images/themeForest-logo.png": "425f5ae81fd3fd46eddb4de29ccb369d715ced5d",
-    "/assets/images/tutscoder_logo.png": "4c3aa1e7eb65d9a6754eb36f664f66507578f6ad",
+    "/assets/images/tutscoder_logo.png": "19d786c801fb91fd382e830e24dd13e755a00b3a",
     "/assets/images/udemy-logo.png": "a9bbf4d7567789d7c8a3d310bf31cb47190e0134",
-    "/favicon.ico": "502f55e659ba44e41e93356b5f08cd19250bd866",
+    "/favicon.ico": "3e8d6e174676c2619b2b6f7efdefc0a7dc644ad2",
     "/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
     "/fontawesome-webfont.20fd1704ea223900efa9.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
     "/fontawesome-webfont.8b43027f47b20503057d.eot": "d980c2ce873dc43af460d4d572d441304499f400",
     "/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
     "/fontawesome-webfont.f691f37e57f04c152e23.woff": "28b782240b3e76db824e12c02754a9731a167527",
-    "/index.html": "d7b1334fba06a6eed0e2041c5db135337e64d278",
-    "/main-es2015.a2516bfece4fcb8d4a8b.js": "79d2fbb19d7bc89ad802cf3f8fa7406a3b2ee105",
-    "/main-es5.a2516bfece4fcb8d4a8b.js": "7818bac688c6ec7cda8bbd88a54dec0d14f05613",
+    "/index.html": "a7dba78073c3338610952f32343e7eefad1b4e46",
+    "/main-es2015.8793dae15c6a6b164252.js": "fd31b4c089ce6743e0ee5b67d411015cc7e5da28",
+    "/main-es5.8793dae15c6a6b164252.js": "d6d2f4a231f6fa679880d3fb2cd9c71e3e509519",
     "/manifest.webmanifest": "8fc2e79ab8587074155388dd84af631b87b30ed5",
     "/polyfills-es2015.75c375c674ece37157aa.js": "65c537467564ee0ba776b629f71ed3413413a7cb",
     "/polyfills-es5.2c28da0b30d2b25ffb4c.js": "cac5083c3460781ab1e2945e50f4d7c310007691",
     "/runtime-es2015.7d06920316d6a54437f8.js": "f2d4ee5522e0ad91bf45e8e2d19a60e710b60ea7",
     "/runtime-es5.7d06920316d6a54437f8.js": "723cf14617b5e15c066027643fe51d976db84832",
     "/scripts.a73844de5f291be94c3b.js": "da86317d51a7b1688a791377281b90b7c72455d6",
-    "/styles.3b7f118bfdc8e3f624dd.css": "a53749d4ea5c622f303652a0507c6db5b90cf671"
+    "/styles.2a6b563a48bcd7019cb3.css": "050c87a9ef5780d25ee3898f429ae4faa09a99f0"
   },
   "navigationUrls": [
     {
