@@ -28,7 +28,7 @@ a:visited {
 }
 
 .trending-bar-dark {
-  background: #292931;
+  background: #40356f;
   color: #fff;
   padding: 10px 0;
 }
@@ -56,12 +56,12 @@ a:visited {
 
 // Navigation bar
 .bg-dark {
-  background: #000 !important;
+  background: #40356f !important;
 }
 
 .main-navbar {
   position: relative;
-  border-bottom: 3px solid #dc3545;
+  border-bottom: 3px solid #69e9f5;
 }
 
 .navigation {
@@ -204,7 +204,7 @@ a:visited {
 }
 
 .main-navbar .dropdown-menu .dropdown-item:hover {
-  background: #dc3545;
+  background: #69e9f5;
   color: #fff;
 }
 
@@ -250,11 +250,11 @@ a:visited {
   width: auto;
   top: -42px;
   transition: .2s all;
-  border: 1px solid #dc3545;
+  border: 1px solid #69e9f5;
   left: unset;
   right: 35px;
   z-index: 3;
-  background: #dc3545;
+  background: #69e9f5;
   border-radius: 2px;
   position: absolute;
   right: 15px;
