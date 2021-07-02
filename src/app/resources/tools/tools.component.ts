@@ -18,7 +18,7 @@ export class ToolsComponent implements OnInit {
           title: "Bluehost",
           desc: "Bluehost is the best web hosting to host your website.",
           img: "./assets/images/bluehost-logo.png",
-          link: "https://www.bluehost.com/track/tutscoder",
+          link: "https://www.bluehost.com/track/genhub/",
         },
       /*   {
           title: "GoDaddy Hosting",
