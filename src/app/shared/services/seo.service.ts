@@ -15,8 +15,8 @@ export class SeoService {
     config = {
       title: `GenHub - Programming Blog & Web Development Tutorials`,
       description: `Learn Web Development, NodeJs, Angular, JavaScript, jQuery ,Ajax,ReactJs, WordPress with GenHub tutorials`,
-      image: `https://www.tutscoder.com/assets/icons/apple-touch-icon.png`,
-      url: `https://www.tutscoder.com/${this.router.url}`,
+      image: `https://genhub-blog.herokuapp.com/icons/apple-touch-icon.png`,
+      url: `https://genhub-blog.herokuapp.com/${this.router.url}`,
       ...config,
     };
 
@@ -28,7 +28,7 @@ export class SeoService {
 
     // Twitter
     this.meta.updateTag({ name: "twitter:card", content: "summary" });
-    this.meta.updateTag({ name: "twitter:site", content: `@tutscoder` });
+    this.meta.updateTag({ name: "twitter:site", content: `@genhub` });
     this.meta.updateTag({ name: "twitter:title", content: config.title });
     this.meta.updateTag({
       name: "twitter:description",
@@ -38,7 +38,7 @@ export class SeoService {
 
     // Facebook and other social sites
     this.meta.updateTag({ property: "og:type", content: "article" });
-    this.meta.updateTag({ property: "og:site_name", content: `Tutscoder` });
+    this.meta.updateTag({ property: "og:site_name", content: `GenHub` });
     this.meta.updateTag({ property: "og:title", content: config.title });
     this.meta.updateTag({
       property: "og:description",
