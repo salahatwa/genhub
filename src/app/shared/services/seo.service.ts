@@ -15,7 +15,7 @@ export class SeoService {
     config = {
       title: `GenHub - Programming Blog & Web Development Tutorials`,
       description: `Learn Web Development, NodeJs, Angular, JavaScript, jQuery ,Ajax,ReactJs, WordPress with GenHub tutorials`,
-      image: `https://genhub-blog.herokuapp.com/icons/apple-touch-icon.png`,
+      image: `https://genhub-blog.herokuapp.com/assets/icons/apple-touch-icon.png`,
       url: `https://genhub-blog.herokuapp.com/${this.router.url}`,
       ...config,
     };
