@@ -1,10 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { ErrorHandler, NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { TransferHttpCacheModule } from "@nguniversal/common";
-import { AppRoutingModule,routedComponents } from "./app-routing.module";
+import { AppRoutingModule, routedComponents } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { HighlightService } from "./shared/services/highlight.service";
@@ -33,6 +33,7 @@ import { NgProgressHttpModule } from "ngx-progressbar/http";
 import { AdsenseModule } from "ng2-adsense";
 import { NgxUiLoaderModule } from "ngx-ui-loader";
 import { BrowserStateInterceptor } from "./browserstate.interceptor";
+import { SentryErrorHandler } from './error.service';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,11 @@ import { BrowserStateInterceptor } from "./browserstate.interceptor";
       useClass: BrowserStateInterceptor,
       multi: true,
     },
+    {
+      provide: ErrorHandler,
+      useClass: SentryErrorHandler,
+    },
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
