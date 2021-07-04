@@ -2,9 +2,7 @@ import { Injectable, ErrorHandler, Injector } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http'
 import * as Sentry from "@sentry/browser";
-Sentry.init({
-    dsn: "https://2d5d5dd7ed6b4542907fd320487ec694@o911696.ingest.sentry.io/5848104"
-});
+
 @Injectable({
     providedIn: 'root'
 })
@@ -20,7 +18,7 @@ export class SentryErrorHandler implements ErrorHandler {
         else {
             console.error("an error occured here mate");
             //ask user to report error if error not server related
-            Sentry.showReportDialog({ eventId });
+            // Sentry.showReportDialog({ eventId });
         }
         //navigate to error page
         router.navigate(['error']);

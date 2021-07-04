@@ -78,6 +78,7 @@ import { SentryErrorHandler } from './error.service';
     {
       provide: ErrorHandler,
       useClass: SentryErrorHandler,
+    
     },
   ],
   bootstrap: [AppComponent],
