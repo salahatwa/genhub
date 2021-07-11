@@ -21,7 +21,7 @@ export class SentryErrorHandler implements ErrorHandler {
             // Sentry.showReportDialog({ eventId });
         }
         //navigate to error page
-        router.navigate(['error']);
+        // router.navigate(['error']);
 
         //return error;
         //pass the error if needed
